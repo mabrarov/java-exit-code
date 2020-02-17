@@ -12,7 +12,6 @@ public class Main {
       System.out.println("Shutdown hook called");
       shutdown.countDown();
       await(completed);
-      runtime.halt(0);
     }));
     System.out.println("Press Ctrl+C to exit");
     await(shutdown);

@@ -2,7 +2,7 @@ FROM gcr.io/distroless/java:11
 
 ADD rootfs.tar /
 
-CMD ["/java-se-exit-code-app.jar"]
+ENTRYPOINT ["/tini", "-e", "130", "-e", "143", "--", "/usr/bin/java", "-jar", "/java-se-exit-code-app.jar"]
 
 LABEL name="@docker.repository@" \
     version="@project.version@" \
