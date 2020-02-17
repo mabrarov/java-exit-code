@@ -6,6 +6,16 @@
         <format>tar</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <outputDirectory/>
+            <directory>${project.build.directory}</directory>
+            <includes>
+                <include>tini</include>
+            </includes>
+            <fileMode>0555</fileMode>
+        </fileSet>
+    </fileSets>
     <dependencySets>
         <dependencySet>
             <outputDirectory/>
