@@ -36,7 +36,7 @@
                         </goals>
                         <configuration>
                             <skip>${docker.skip}</skip>
-                            <url>https://github.com/krallin/tini/releases/download/v${tini.version}/tini-static</url>
+                            <url>https://github.com/krallin/tini/releases/download/v${tini.version}/tini</url>
                             <outputFileName>tini</outputFileName>
                         </configuration>
                     </execution>
