@@ -30,6 +30,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <tini.version>0.18.0</tini.version>
+        <busybox.version>1.31.0</busybox.version>
         <docker.verbose>true</docker.verbose>
         <docker.skip>true</docker.skip>
     </properties>

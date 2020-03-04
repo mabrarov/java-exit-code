@@ -40,6 +40,18 @@
                             <outputFileName>tini</outputFileName>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>download-busybox</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <configuration>
+                            <skip>${docker.skip}</skip>
+                            <url>https://www.busybox.net/downloads/binaries/${busybox.version}-defconfig-multiarch-musl/busybox-x86_64</url>
+                            <outputFileName>busybox</outputFileName>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
