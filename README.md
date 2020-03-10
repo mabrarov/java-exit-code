@@ -1,4 +1,4 @@
-# Test of docker-maven-plugin
+# Test of Java exit codes
 
 [![License](https://img.shields.io/github/license/mabrarov/java-exit-code.svg)](https://github.com/mabrarov/java-exit-code/tree/master/LICENSE)
 
