@@ -10,6 +10,12 @@ env:
     - MAVEN_WRAPPER: 0
     - COVERAGE_BUILD: 0
     - COPILOT_BUILD: 0
+    - CURL_CONNECT_TIMEOUT: 300
+    - CURL_MAX_TIME: 1800
+    - CURL_RETRY: 10
+    - CURL_RETRY_DELAY: 10
+    - DEPENDENCIES_HOME: ${HOME}/dependencies
+    - DOWNLOADS_HOME: ${HOME}/downloads
 
 matrix:
   include:
