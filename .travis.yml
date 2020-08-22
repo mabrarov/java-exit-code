@@ -1,0 +1,26 @@
+language: java
+
+cache:
+  directories:
+    - ${HOME}/.m2/repository
+    - ${HOME}/downloads
+
+env:
+  global:
+    - MAVEN_WRAPPER: 0
+    - COVERAGE_BUILD: 0
+
+matrix:
+  include:
+    # OpenJDK 11
+    - dist: bionic
+      jdk: openjdk11
+    # OpenJDK 8
+    - dist: trusty
+      jdk: openjdk8
+
+install: source ./scripts/travis/install.sh
+
+script: source ./scripts/travis/build.sh
+
+after_success: source ./scripts/travis/codecov.sh
