@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/github/license/mabrarov/java-exit-code.svg)](https://github.com/mabrarov/java-exit-code/tree/master/LICENSE)
 [![Travis CI build status](https://travis-ci.org/mabrarov/java-exit-code.svg?branch=master)](https://travis-ci.org/mabrarov/java-exit-code)
+[![Black Duck Security Risk](https://copilot.blackducksoftware.com/github/repos/mabrarov/java-exit-code/branches/master/badge-risk.svg)](https://copilot.blackducksoftware.com/github/repos/mabrarov/java-exit-code/branches/master)
 
 Test of Java exit code.
 
