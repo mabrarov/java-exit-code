@@ -5,6 +5,9 @@ cache:
     - ${HOME}/.m2/repository
     - ${HOME}/downloads
 
+before_cache:
+  - mvn -q -fn org.codehaus.mojo:build-helper-maven-plugin:3.2.0:remove-project-artifact -Dbuildhelper.removeAll=false -Dbuildhelper.failOnError=false
+
 env:
   global:
     - MAVEN_WRAPPER: 0
