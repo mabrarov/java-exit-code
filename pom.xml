@@ -47,6 +47,11 @@
                 <artifactId>spring-boot-exit-code-app</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>9.0.37</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
