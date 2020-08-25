@@ -1,39 +1,40 @@
-language: java
+language: 'java'
 
 cache:
   directories:
-    - ${HOME}/.m2/repository
-    - ${HOME}/downloads
+    - '${HOME}/.m2/repository'
+    - '${HOME}/downloads'
 
 before_cache:
-  - mvn -q -fn org.codehaus.mojo:build-helper-maven-plugin:3.2.0:remove-project-artifact -Dbuildhelper.removeAll=false -Dbuildhelper.failOnError=false
+  - 'mvn -q -fn org.codehaus.mojo:build-helper-maven-plugin:3.2.0:remove-project-artifact -Dbuildhelper.removeAll=false -Dbuildhelper.failOnError=false'
 
 env:
   global:
-    - MAVEN_WRAPPER: 0
-    - COVERAGE_BUILD: 0
-    - COPILOT_BUILD: 0
-    - CURL_CONNECT_TIMEOUT: 300
-    - CURL_MAX_TIME: 1800
-    - CURL_RETRY: 10
-    - CURL_RETRY_DELAY: 10
-    - DEPENDENCIES_HOME: ${HOME}/dependencies
-    - DOWNLOADS_HOME: ${HOME}/downloads
+    - MAVEN_WRAPPER: '0'
+    - COVERAGE_BUILD: '0'
+    - COPILOT_BUILD: '0'
+    - CURL_CONNECT_TIMEOUT: '300'
+    - CURL_MAX_TIME: '1800'
+    - CURL_RETRY: '10'
+    - CURL_RETRY_DELAY: '10'
+    - DEPENDENCIES_HOME: '${HOME}/dependencies'
+    - DOWNLOADS_HOME: '${HOME}/downloads'
 
 matrix:
   include:
     # OpenJDK 11
-    - dist: bionic
-      jdk: openjdk11
-      env: COPILOT_BUILD=1
+    - dist: 'bionic'
+      jdk: 'openjdk11'
+      env:
+        COPILOT_BUILD: '1'
     # OpenJDK 8
-    - dist: trusty
-      jdk: openjdk8
+    - dist: 'trusty'
+      jdk: 'openjdk8'
 
-install: source ./scripts/travis/install.sh
+install: 'source ./scripts/travis/install.sh'
 
-script: source ./scripts/travis/build.sh
+script: 'source ./scripts/travis/build.sh'
 
 after_success:
-  - source ./scripts/travis/codecov.sh
-  - source ./scripts/travis/copilot.sh
+  - 'source ./scripts/travis/codecov.sh'
+  - 'source ./scripts/travis/copilot.sh'
