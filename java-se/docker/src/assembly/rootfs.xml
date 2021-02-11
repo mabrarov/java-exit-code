@@ -6,26 +6,6 @@
         <format>tar</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
-    <fileSets>
-        <fileSet>
-            <outputDirectory>usr/bin</outputDirectory>
-            <directory>${project.build.directory}</directory>
-            <includes>
-                <include>tini</include>
-            </includes>
-            <directoryMode>0755</directoryMode>
-            <fileMode>0555</fileMode>
-        </fileSet>
-        <fileSet>
-            <outputDirectory>busybox</outputDirectory>
-            <directory>${project.build.directory}</directory>
-            <includes>
-                <include>busybox</include>
-            </includes>
-            <directoryMode>0755</directoryMode>
-            <fileMode>0555</fileMode>
-        </fileSet>
-    </fileSets>
     <dependencySets>
         <dependencySet>
             <outputDirectory/>
